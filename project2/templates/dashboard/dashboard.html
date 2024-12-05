@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Dashboard</title>
+    <link rel="stylesheet" href="/static/dashboard.css">
+</head>
+<body>
+    <header>
+        <h1>My Rental Items</h1>
+        <button class="add-button" onclick="showAddItemForm()">Add Item</button>
+    </header>
+
+    <div class="item-container" id="itemContainer"></div>
+
+    <!-- Add Item Form (Hidden by default) -->
+    <div class="overlay" id="addItemOverlay">
+        <div class="form-popup">
+            <h2>Add Rental Item</h2>
+            
+            <h3>Item Name</h3>
+            <input type="text" id="itemName" placeholder="Item Name">
+            
+            <h3>Item Rented By</h3>
+            <input type="text" id="rentedBy" placeholder="Renter's Name">
+            
+            <h3>Rental Date</h3>
+            <input type="date" id="rentalDate">
+            
+            <h3>Upload Item Photo</h3>
+            <input type="file" id="itemPhoto" accept="image/*">
+            
+            <h3>Aadhar Card Number</h3>
+            <input type="text" id="aadharNumber" placeholder="Aadhar Card Number">
+            
+            <h3>Rent Paid (in INR)</h3>
+            <input type="number" id="rentPaid" placeholder="Amount Paid">
+            
+            <button onclick="addItem()">Add</button>
+            <button onclick="closeForm()">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Item Details Overlay (Hidden by default) -->
+    <div id="itemDetailsOverlay" class="overlay" style="display:none;"></div>
+
+    <script src="/static/scripts/script.js"></script>
+</body>
+</html>
